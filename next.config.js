@@ -22,13 +22,16 @@ const contentSecurityPolicy = [
   `style-src 'self' 'unsafe-inline'`,
   `connect-src 'self' api.umami.is cloud.umami.is`,
   `frame-ancestors 'self' 'https://orderboard.test'`,
-  `x-frame-options 'SAMEORIGIN'`,
 ];
 
 const headers = [
   {
     key: 'X-DNS-Prefetch-Control',
     value: 'on',
+  },
+  {
+    "key": "X-Frame-Options",
+    "value": ""
   },
   {
     key: 'Content-Security-Policy',
